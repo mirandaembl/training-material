@@ -1,4 +1,4 @@
----
+f---
 layout: tutorial_hands_on
 
 title: "Running the GTN website locally using the command line"
@@ -59,6 +59,31 @@ We also need to make sure that a couple of other utilities and build requirement
 >     1. Install conda (if not already installed): `make install-conda`
 >     2. (You may need to exit the terminal and re-open for conda to be recognised. Navigate back to the same place.)
 >     3. Create the `galaxy_training_material` conda environment: `make create-env`
+>
+> 6. Install Jekyll and related modules into the conda environment: `make install`
+{: .hands_on}
+
+> <hands-on-title>Install the requirements git Ruby</hands-on-title>
+>
+> 1. Open a Terminal
+> 2. Use your package manager to install `git`, `curl`, `ruby` , and `rvm`
+>
+>    - For Debian/Ubuntu: `sudo apt update && sudo apt install git curl make`
+>    - For Fedora/CentOs/RedHat: `sudo yum install git curl make`
+>
+> 3. (If not done yet) Clone the training material GitHub repository: `git clone https://github.com/galaxyproject/training-material.git`
+> 4. Navigate to the `training-material/` folder with `cd`
+> 5. Set up the conda environment
+>
+>     It will install some needed tools (ruby, nodejs, etc) in a protected environment, without interfering with the existing tools or versions.
+>
+>     1. Install ruby (if not already installed): `XXXX make ruby`
+>     2. (You may need to exit the terminal and re-open for conda to be recognised. Navigate back to the same place.)
+>     3. Create the `galaxy_training_material` conda environment: `rvm use 3.2.x@name-of-env --create` for the fist time, the next times use --run
+>   
+>     4. bundle install
+>     5. in make the taqrget server code spaces has the faster stgarup time and the target server-giutpod has a more complete version takes longer
+>     6. if docker then volumes can be `topics` that where the tutorials are,. `faqs` contain snippets, `learning  pathways` , 'events', 'news', 'metadata' only the topic metadata , '
 >
 > 6. Install Jekyll and related modules into the conda environment: `make install`
 {: .hands_on}
